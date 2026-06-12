@@ -73,7 +73,7 @@ Estas imágenes permiten verificar visualmente la calidad de la segmentación.
 
 La siguiente figura representa la salida típica del modelo para tres tipos de cáncer:
 
-![Ejemplo de segmentación](M3_miniproject_UNet_SkinCancer_Segmenter) *(imagen ilustrativa)*
+![Ejemplo de segmentación](pred_BCC_23_20260610_222204.png) *(imagen ilustrativa)*
 
 - **Caso BCC**: el modelo delimita correctamente los nidos tumorales, aunque en bordes irregulares tiende a suavizar pequeñas discontinuidades.
 - **Caso SCC**: también logra una buena separación tumor-fondo.
