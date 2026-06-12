@@ -69,17 +69,17 @@ Figuras comparativas con tres paneles por imagen:
 
 Estas imágenes permiten verificar visualmente la calidad de la segmentación.
 
-## Ejemplo de resultados (Figura 3 del documento)
+## Ejemplo de resultados (BCC)
 
-La siguiente figura representa la salida típica del modelo para tres tipos de cáncer:
+La siguiente figura ilustra el desempeño del modelo U-Net en una imagen de prueba BCC:
 
-![Ejemplo de segmentación](pred_BCC_23_20260610_222204.png) *(imagen ilustrativa)*
+![Comparación de segmentación](pred_BCC_23_20260610_222204.png)
 
-- **Caso BCC**: el modelo delimita correctamente los nidos tumorales, aunque en bordes irregulares tiende a suavizar pequeñas discontinuidades.
-- **Caso SCC**: también logra una buena separación tumor-fondo.
-- **Caso IEC**: se comporta igualmente bien.
+- **Original**: imagen histológica teñida con hematoxilina y eosina (H&E).
+- **Máscara real**: anotación manual que sirve como referencia (blanco = tumor, negro = fondo).
+- **Predicción**: máscara binaria generada por el modelo.
 
-En promedio, el modelo alcanza valores de **Dice > 0.95** e **IoU > 0.95** en la mayoría de las imágenes, demostrando alta precisión.
+Como se observa, la predicción del modelo se superpone casi perfectamente con la máscara real. Las diferencias son mínimas y se localizan principalmente en bordes de regiones tumorales irregulares o en zonas de baja densidad celular, donde el modelo tiende a producir una segmentación más suave. Este comportamiento es consistente con las métricas cuantitativas (IoU y Dice > 0.95 en la mayoría de los casos).
 
 ## Limitaciones y trabajo futuro
 
